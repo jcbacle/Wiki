@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Customize</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body class="wikidpad">
+<span class="wikidpad parent-nodes">parent nodes: <span class="wikidpad parent-node"><a href="WindbgWiki.html" class="wikidpad">WindbgWiki</a></span><br class="wikidpad" /><br class="wikidpad" /></span>
+<a name=".h0" class="wikidpad"></a><h2 class="wikidpad heading-level2">Customize</h2>
+Contents: <div class="wikidpad page-toc">
+<div class="wikidpad page-toc-level2"><a href="#.h0" class="wikidpad">Customize</a></div>
+<div class="wikidpad page-toc-level3"><a href="#.h48" class="wikidpad">Symbol Path</a></div>
+<div class="wikidpad page-toc-level3"><a href="#.h668" class="wikidpad">Workspaces customization</a></div>
+</div>
+<br class="wikidpad" />
+<a href="javascript:history.go(-1)" class="wikidpad">Back</a><hr class="wikidpad" />
+<a name=".h48" class="wikidpad"></a><h3 class="wikidpad heading-level3">Symbol Path</h3>
+Set the symbol path to download the public symbols fro Microsoft DLLs in order to see what is going on in the system layer.<br class="wikidpad" />
+Either :<ul class="wikidpad bulletlist">
+<li class="wikidpad" />Set on machine the _NT_SYMBOL_PATH environment variable (will be also available in Visual Studio)<pre class="wikidpad">    _NT_SYMBOL_PATH = srv*c:\debug\symbols\microsoft*http://msdl.microsoft.com/download/symbols
+</pre>
+
+<li class="wikidpad" />or set in Windbg with command <pre class="wikidpad">    .sympath srv*c:\debug\symbols\microsoft*http://msdl.microsoft.com/download/symbols
+</pre>
+
+<li class="wikidpad" />or set in Windbg via the menu <b class="wikidpad">"File &gt; Symbol File Path..."</b><br class="wikidpad" />
+<img src="files/Windbg_SymbolPath.png" alt="" border="0" class="wikidpad" /><br class="wikidpad" />
+</ul>
+<hr class="wikidpad" />
+<a name=".h668" class="wikidpad"></a><h3 class="wikidpad heading-level3">Workspaces customization</h3>
+<ol class="wikidpad orderedlist">
+<li class="wikidpad" />Before loading a theme, it's recommended to clear all the workspace data. In Windbg, via the menu <b class="wikidpad">"File &gt; Clear Workspace.."</b>. Select <b class="wikidpad">"Clear All"</b> in the pop-up window and then click "Ok".
+<li class="wikidpad" />Choose one of the themes provided in the "themes" sub-directory of Windbg. For example, on my machine, the directory is <pre class="wikidpad">    C:\Program Files (x86)\Windows Kits\8.1\Debuggers\x86\themes
+</pre>
+
+<li class="wikidpad" />Set the symbol path, see above.
+<li class="wikidpad" />Set the source path to <pre class="wikidpad">        SRV*;C:\debug\sourceroot
+</pre>
+
+<li class="wikidpad" />Tweak the theme<ul class="wikidpad bulletlist">
+<li class="wikidpad" />Add all the windows you wish to see (Command, Calls, Watch, Locals, Registers …) and adjust their positioning.
+<li class="wikidpad" />To change the font, choose Font… from the View menu.
+<li class="wikidpad" />To change the syntax colors, choose Options… from the View menu. Then, in the Colors area, select a syntax element and click the Change button to change the color.
+<li class="wikidpad" />Optionally set paths (symbol path, source path, executable image path …) to make sure that WinDbg can locate all of the files that it needs to debug effectively.</ul>
+
+<li class="wikidpad" />Save the workspace via the menu <b class="wikidpad">"File &gt; Save Workspace"</b><br class="wikidpad" />
+</ol>
+Samples:<br class="wikidpad" />
+<span class="wikidpad url-link"><a href="file://files/windbg.reg" class="wikidpad">file://files/windbg.reg</a></span><br class="wikidpad" />
+<span class="wikidpad url-link"><a href="file:///C:/Users/Jean-Christian/Documents/GitHub/Wiki/files/windbg.reg" class="wikidpad">file:///C:/Users/Jean-Christian/Documents/GitHub/Wiki/files/windbg.reg</a></span><br class="wikidpad" />
+<br class="wikidpad" />
+Links:<ul class="wikidpad bulletlist">
+<li class="wikidpad" /><span class="wikidpad url-link"><a href="http://blogs.msdn.com/b/tess/archive/2008/04/18/pimp-up-your-debugger-creating-a-custom-workspace-for-windbg-debugging.aspx" class="wikidpad">Pimp up your debugger: Creating a custom workspace for windbg debugging</a></span>
+<li class="wikidpad" /><span class="wikidpad url-link"><a href="http://www.zachburlingame.com/2011/12/customizing-your-windbg-workspace-and-color-scheme/" class="wikidpad">Customizing your WinDbg Workspace and Color Scheme</a></span>
+<li class="wikidpad" /><span class="wikidpad url-link"><a href="https://briolidz.wordpress.com/2013/11/28/windbg-custom-workspace-and-color-scheme/" class="wikidpad">WinDbg: Custom workspace and color scheme</a></span><br class="wikidpad" />
+<br class="wikidpad" />
+</ul>
+<hr class="wikidpad" />
+previous: <a href="javascript:history.go(-1)" class="wikidpad">Back</a><br class="wikidpad" />
+parents:&nbsp; <span class="wikidpad wiki-link"><a href="WindbgWiki.html" class="wikidpad">WindbgWiki</a></span><br class="wikidpad" />
+attributes: <span class="wikidpad property attribute">[tree_position: 2]</span><br class="wikidpad" />
+    </body>
+</html>
