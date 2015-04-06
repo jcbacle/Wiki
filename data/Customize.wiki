@@ -1,0 +1,53 @@
+﻿++ Customize
+Contents: [:toc:]
+[:rel:back]
+----
++++ Symbol Path
+
+Set the symbol path to download the public symbols fro Microsoft DLLs in order to see what is going on in the system layer.
+Either :
+    * Set on machine the _NT_SYMBOL_PATH environment variable (will be also available in Visual Studio)
+    <<pre
+    _NT_SYMBOL_PATH = srv*c:\debug\symbols\microsoft*http://msdl.microsoft.com/download/symbols
+    >>
+    * or set in Windbg with command 
+    <<pre 
+    .sympath srv*c:\debug\symbols\microsoft*http://msdl.microsoft.com/download/symbols
+    >>
+    * or set in Windbg via the menu *"File > Symbol File Path..."*
+    rel://files/Windbg_SymbolPath.png
+
+----
++++ Workspaces customization
+
+    1. Before loading a theme, it's recommended to clear all the workspace data. In Windbg, via the menu *"File > Clear Workspace.."*. Select *"Clear All"* in the pop-up window and then click "Ok".
+    2. Choose one of the themes provided in the "themes" sub-directory of Windbg. For example, on my machine, the directory is 
+    <<pre
+    C:\Program Files (x86)\Windows Kits\8.1\Debuggers\x86\themes
+    >>
+    3. Set the symbol path, see above.
+    4. Set the source path to 
+    <<pre
+        SRV*;C:\debug\sourceroot
+    >>
+    5. Tweak the theme
+        * Add all the windows you wish to see (Command, Calls, Watch, Locals, Registers …) and adjust their positioning.
+        * To change the font, choose Font… from the View menu.
+        * To change the syntax colors, choose Options… from the View menu. Then, in the Colors area, select a syntax element and click the Change button to change the color.
+        * Optionally set paths (symbol path, source path, executable image path …) to make sure that WinDbg can locate all of the files that it needs to debug effectively.
+    6. Save the workspace via the menu *"File > Save Workspace"*
+
+Samples:
+[file://files/windbg.reg]
+[file:///C:/Users/Jean-Christian/Documents/GitHub/Wiki/files/windbg.reg]
+
+Links:
+    * [http://blogs.msdn.com/b/tess/archive/2008/04/18/pimp-up-your-debugger-creating-a-custom-workspace-for-windbg-debugging.aspx|Pimp up your debugger: Creating a custom workspace for windbg debugging]
+    * [http://www.zachburlingame.com/2011/12/customizing-your-windbg-workspace-and-color-scheme/|Customizing your WinDbg Workspace and Color Scheme]
+    * [https://briolidz.wordpress.com/2013/11/28/windbg-custom-workspace-and-color-scheme/|WinDbg: Custom workspace and color scheme]
+
+
+----
+previous: [:rel:back]
+parents:&nbsp; [:rel:parents; aslist]
+attributes: [tree_position: 2]
