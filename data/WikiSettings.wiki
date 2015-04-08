@@ -1,10 +1,23 @@
 ﻿++ Wiki Settings
+[:rel:back]
+----
 
-These are your default global settings.
+*Specific settings*
+<<
+[global.template: Template]
+[global.font: Consolas]
+>>
 
+*Default settings*
+<<
 [global.importance.low.color: grey]
 [global.importance.high.bold: true]
 [global.contact.icon: contact]
 [global.wrap: 70]
+[global.view_pane: preview]
+>>
 
-[icon: cog]
+----
+previous: [:rel:back]
+parents:&nbsp; [:rel:parents; aslist]
+attributes: [tree_position: 1001], [icon:cog]

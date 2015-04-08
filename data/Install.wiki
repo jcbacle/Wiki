@@ -4,15 +4,6 @@
 
 To get Windbg, go to [https://msdn.microsoft.com/en-US/windows/hardware/gg454513|Windows Driver Kit]
 
-Setup:
-
-
-Load up the SOS extension in Windbg to debug managed applications:
-    * SOS reference cheat sheet: [https://msdn.microsoft.com/library/bb190764.aspx|SOS.dll (SOS Debugging Extension)]
-    * 
-
-
-
 ----
 previous: [:rel:back]
 parents:&nbsp; [:rel:parents; aslist]

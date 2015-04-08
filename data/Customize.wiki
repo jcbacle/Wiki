@@ -4,7 +4,7 @@ Contents: [:toc:]
 ----
 +++ Symbol Path
 
-Set the symbol path to download the public symbols fro Microsoft DLLs in order to see what is going on in the system layer.
+Set the symbol path to download the public symbols for Microsoft DLL in order to see what is going on in the system layer.
 Either :
     * Set on machine the _NT_SYMBOL_PATH environment variable (will be also available in Visual Studio)
     <<pre
@@ -28,20 +28,21 @@ Either :
     3. Set the symbol path, see above.
     4. Set the source path to 
     <<pre
-        SRV*;C:\debug\sourceroot
+        SRV*;C:\debug\source
     >>
     5. Tweak the theme
         * Add all the windows you wish to see (Command, Calls, Watch, Locals, Registers …) and adjust their positioning.
         * To change the font, choose Font… from the View menu.
         * To change the syntax colors, choose Options… from the View menu. Then, in the Colors area, select a syntax element and click the Change button to change the color.
-        * Optionally set paths (symbol path, source path, executable image path …) to make sure that WinDbg can locate all of the files that it needs to debug effectively.
+        * Optionally set paths (symbol path, source path, executable image path …) to make sure that Windbg can locate all of the files that it needs to debug effectively.
     6. Save the workspace via the menu *"File > Save Workspace"*
 
-Samples:
-[file://files/windbg.reg]
-[file:///C:/Users/Jean-Christian/Documents/GitHub/Wiki/files/windbg.reg]
+----
++++Samples
+    * Download my registry key: [rel://files/mywindbg.reg|mywindbg.reg]
 
-Links:
+----
++++Links
     * [http://blogs.msdn.com/b/tess/archive/2008/04/18/pimp-up-your-debugger-creating-a-custom-workspace-for-windbg-debugging.aspx|Pimp up your debugger: Creating a custom workspace for windbg debugging]
     * [http://www.zachburlingame.com/2011/12/customizing-your-windbg-workspace-and-color-scheme/|Customizing your WinDbg Workspace and Color Scheme]
     * [https://briolidz.wordpress.com/2013/11/28/windbg-custom-workspace-and-color-scheme/|WinDbg: Custom workspace and color scheme]
